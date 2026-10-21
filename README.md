@@ -76,6 +76,11 @@ que o chamador concede).
 6. Alertas criticos bloqueiam o merge ate serem tratados ou formalmente aceitos.
 7. Nenhuma execucao do Esquadrao de QA de Negocio e reportada como concluida
    sem um commit de registro verificavel (ver `policies/esquadrao-qa.md`).
+8. Nenhuma alegacao de sucesso/conclusao sem evidencia fresca (comando
+   rodado na mesma resposta, nao relatorio de subagente sem conferir),
+   revisao de codigo independente antes de mesclar PR autoral, e isolamento
+   de trabalho paralelo via worktree (nao clone completo) quando possivel —
+   ver `policies/praticas-de-engenharia.md`.
 
 ## Proximos passos
 
