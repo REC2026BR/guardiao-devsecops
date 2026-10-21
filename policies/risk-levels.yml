@@ -1,0 +1,26 @@
+version: 1
+
+levels:
+  critical:
+    block_merge: true
+    human_approval: true
+    examples:
+      - exposed_production_credential
+      - remote_code_execution
+      - authentication_bypass
+      - public_database
+  high:
+    block_merge: true
+    human_approval: true
+    examples:
+      - sql_injection
+      - missing_authorization
+      - vulnerable_runtime_dependency
+  medium:
+    block_merge: false
+    human_approval: false
+    due_days: 14
+  low:
+    block_merge: false
+    human_approval: false
+    due_days: 30

@@ -1,0 +1,4 @@
+# Ajuste estes responsaveis para a sua organizacao.
+/.github/ @security-team
+/policies/ @security-team
+* @project-maintainers
