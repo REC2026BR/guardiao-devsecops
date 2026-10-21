@@ -57,3 +57,22 @@ regenerados a partir desses JSONL, nunca editados a mao — mesmo padrao que
    `simulacoes_negocio.jsonl` ou `historico.jsonl`.
 5. So depois dos 4 itens acima o resultado pode ser comunicado como
    concluido pra fora da sessao que rodou.
+
+## Economia de tokens: PROJECT_MAP.md nao e so um artefato do Esquadrao
+
+O objetivo de "economia" do sistema nao se resume a medicao do
+`limpar_codigo` (`economista.py`) sobre o codigo-fonte. O efeito maior e
+evitar que qualquer sessao futura do Claude — rodando o Esquadrao ou nao —
+gaste tokens remapeando a estrutura do projeto do zero (Glob/Grep
+exploratorio amplo) quando ja existe um `PROJECT_MAP.md` gerado
+(`scripts/qa_squad/project_map.py`).
+
+**Convencao obrigatoria em todo repositorio conectado ao Guardiao:** o
+`CLAUDE.md` da raiz (lido automaticamente por qualquer sessao do Claude Code
+no inicio do trabalho) deve conter uma secao curta instruindo a ler
+`PROJECT_MAP.md` antes de explorar o codigo com Glob/Grep/Read amplos, e so
+cair pra exploracao normal quando o mapa nao tiver o que for preciso. Se o
+repo ja usa `@AGENTS.md` ou tem um `CLAUDE.md` extenso de outro assunto
+(regras de negocio, arquitetura), a secao entra como adicao, nunca
+substituindo o conteudo existente. Ja aplicada nos 11 repositorios conectados
+em 21/10/2026 — replicar em qualquer repositorio novo que entrar na familia.
