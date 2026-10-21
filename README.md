@@ -32,17 +32,22 @@ permissions:
 
 jobs:
   security:
-    uses: ORGANIZACAO/guardiao-devsecops/.github/workflows/security-reusable.yml@v1
+    uses: REC2026BR/guardiao-devsecops/.github/workflows/security-reusable.yml@main
     with:
       languages: '["javascript"]'
 ```
 
-Substitua `ORGANIZACAO` pela organizacao do GitHub. Para um repositorio
-privado, o repositorio central e os workflows reutilizaveis precisam estar
-acessiveis pela mesma organizacao.
+Para repositorio privado, o repositorio central e o repositorio que chama
+precisam ser da mesma conta/organizacao do GitHub (aqui, `REC2026BR`) — ja
+e o caso de toda a familia de projetos.
 
 Para mais de uma linguagem, use por exemplo
 `languages: '["javascript", "python"]'`.
+
+Referenciamos `@main` (nao uma tag) de proposito: ainda nao existe um
+processo de release aqui, entao fixar numa tag inexistente quebraria a
+integracao. Quando `v1` for taggeada de verdade, os repositorios conectados
+podem migrar pra ela.
 
 ## Regras de operacao
 
@@ -60,3 +65,5 @@ Para mais de uma linguagem, use por exemplo
 - Adicionar o ambiente `staging` antes de qualquer automacao de producao.
 - Integrar Trivy/Checkov quando o repositorio tiver Docker ou IaC.
 - Conectar alertas do VDS a um canal de incidentes.
+- Taggear `v1` quando o workflow reutilizavel estabilizar, pra repositorios
+  conectados fixarem numa versao em vez de seguir `main` direto.
