@@ -89,6 +89,12 @@ que o chamador concede).
    ultimo criterio decide a maioria dos casos reais ja registrados) e
    registrar o resultado — adotado ou rejeitado — em
    `CATALOGO_SKILLS_AVALIADAS.md`.
+10. Levantamento ou correcao de dado legado em producao nunca manuseia
+    credencial de banco — script roda de dentro do proprio servico do
+    produto (onde a variavel de ambiente ja existe), levantamento e
+    correcao sao scripts separados, correcao exige flag explicita pra
+    aplicar (dry-run por padrao) e so cobre casos inequivocos apos
+    normalizacao — ver `policies/higiene-de-dados-legados.md`.
 
 ## Proximos passos
 
