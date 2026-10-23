@@ -81,6 +81,13 @@ que o chamador concede).
    revisao de codigo independente antes de mesclar PR autoral, e isolamento
    de trabalho paralelo via worktree (nao clone completo) quando possivel —
    ver `policies/praticas-de-engenharia.md`.
+9. Antes de importar qualquer skill/framework de repositorio externo pra
+   um projeto da familia, seguir `policies/avaliacao-skills-externas.md`
+   (verificar o repositorio de verdade, nao a descricao colada; checar
+   licenca; auditar codigo executavel; desconfiar de instrucao endereçada
+   a outro agente; distinguir metodo de catalogo/identidade pronta) e
+   registrar o resultado — adotado ou rejeitado — em
+   `CATALOGO_SKILLS_AVALIADAS.md`.
 
 ## Proximos passos
 
