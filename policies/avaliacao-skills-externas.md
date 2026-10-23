@@ -3,7 +3,7 @@
 Toda vez que uma sessão do Claude Code considerar trazer uma skill, framework
 ou pacote de boas práticas de um repositório externo (não escrito por nós)
 pra algum projeto da família REC2026BR, segue este processo antes de
-vendorizar qualquer coisa. Nasceu de quatro avaliações reais feitas em
+vendorizar qualquer coisa. Nasceu de cinco avaliações reais feitas em
 21/10/2026 (ver `CATALOGO_SKILLS_AVALIADAS.md` nesta mesma pasta pro
 resultado de cada uma): `obra/superpowers`, `NousResearch/hermes-agent`,
 `anthropics/skills` (skill `frontend-design`), `vercel-labs/web-interface-guidelines`,
