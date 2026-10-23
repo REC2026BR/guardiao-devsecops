@@ -78,6 +78,9 @@ ficar certa:
 
 ## Checklist antes de dizer "pode rodar" pro usuário
 
+- [ ] Em nenhum momento a sessão pediu, viu ou guardou a credencial de
+      banco de produção — o script só roda de dentro do próprio serviço,
+      onde a variável de ambiente já existe.
 - [ ] Script de levantamento só lê (nenhum `UPDATE`/`DELETE`/`INSERT`).
 - [ ] Script de correção tem dry-run como padrão e uma flag explícita
       pra aplicar de verdade.
